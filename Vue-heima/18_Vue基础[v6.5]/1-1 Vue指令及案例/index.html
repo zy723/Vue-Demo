@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>day01</title>
+
 </head>
 <body>
+<div id="app">
+    <div v-cloak>
+        {{msg}}
+    </div>
+    <div v-text="msg">
+    </div>
+    <div v-html="msg"></div>
+    <br>
+    <input type="text" v-model="msg">
+    <br><br><br>
+
+    {{nums}}
+    <br>
+    <input type="button" @click="nums++" value="v-on">
+
+
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+    el: "#app",
+    data: {
+        msg: new Date(),
+        nums: 0
+    }
+});
+
+
+</script>
 
 </body>
 </html>
